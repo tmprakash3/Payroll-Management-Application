@@ -11,7 +11,7 @@ header {
       flex: 1 1 auto;
     }
     .links {
-      color: white;
+      color: #25333C;
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 15px;
       font-weight: initial;
@@ -24,7 +24,8 @@ header {
       }
     }
     .mat-toolbar {
-      background: black;
+      background: #EDF0F1;
+      border-bottom: 1px solid #d4d6d8;
     }
     .mat-icon {
       vertical-align: middle;

@@ -1,0 +1,21 @@
+app-all-employees {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}
+.all-employee-container {
+    padding: 24px;
+}
+.example-full-width {
+    width: 48%;
+}
+.example-full-width:nth-child(even) {
+    margin-left: 8px;
+}
+.btn-center {
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 75%; */
+    text-align: center;
+}

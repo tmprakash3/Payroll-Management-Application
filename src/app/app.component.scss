@@ -1,6 +1,6 @@
 .wrapper-app {
-    flex-direction: row;
-    display: flex;
+    // flex-direction: row;
+    // display: flex;
 }
 .side-nav {
     flex: 15%;
@@ -16,14 +16,37 @@
 }
 .nav-list {
     padding-left: 16px;
+    margin-top: 0;
 }
 .nav-list li {
-    padding: 8px;
-    margin-bottom: 6px;
     list-style-type: none;
 }
 .nav-list li a {
     cursor: pointer;
+    padding: 12px 16px;
+    text-decoration: none;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: 83ms;
+    position: relative;
+    display: block;
+    color: #25333C;
+}
+.nav-list li a.active {
+    color: #0E8543;
+    background-color: #edfff5;
+}
+.nav-list li a.active::before {
+    background-color: #0e8543 !important;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .5s;
+    background-color: transparent;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 5px;
 }
 .nav-list li a:hover {
     color: #0E8543;
@@ -31,4 +54,11 @@
 .mat-drawer-container {
     overflow: initial;
     height: 1000px;
+    width: 100%;
+}
+.mat-drawer.mat-drawer-side {
+    width: 100%;
+}
+.mt-16 {
+    margin-top: 16px;
 }

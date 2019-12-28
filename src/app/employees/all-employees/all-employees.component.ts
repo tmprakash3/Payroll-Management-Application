@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-all-employees',
@@ -6,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-employees.component.scss']
 })
 export class AllEmployeesComponent implements OnInit {
+
+  ngAfterViewInit() {
+    (document.querySelector('.all-employee-container') as HTMLElement).style.display = 'block';
+}
+
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+
 
   constructor() { }
 

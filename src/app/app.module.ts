@@ -9,7 +9,9 @@ import { AuthModule } from './auth/auth.module';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
@@ -57,7 +59,9 @@ import { PayslipsComponent } from './payroll/payslips/payslips.component';
     AppRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
