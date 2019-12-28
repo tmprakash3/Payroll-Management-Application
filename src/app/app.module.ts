@@ -7,12 +7,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatInputModule} from '@angular/material/input';
-
 import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
 import { AuthHeaderInterceptor } from './interceptors/header.interceptor';
@@ -56,12 +50,7 @@ import { PayslipsComponent } from './payroll/payslips/payslips.component';
     SharedModule,
     AuthModule,
     AdminModule,
-    AppRoutingModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    FlexLayoutModule,
-    MatButtonModule,
-    MatInputModule
+    AppRoutingModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
