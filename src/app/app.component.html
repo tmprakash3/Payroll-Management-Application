@@ -1,0 +1,62 @@
+<app-header [user]="user"></app-header>
+<div class="wrapper-app" fxLayout="row" fxLayoutAlign="start center">
+  <div class="side-nav" fxFlex="15">
+    <mat-drawer-container class="example-container" autosize >
+      <mat-drawer class="example-sidenav" mode="side" opened>
+        <ul class="nav-list">
+          <li>
+            <a routerLink="/employee">Employees</a>
+            <ul class="nav-list"> 
+              <li>
+                <a routerLink="/employee/all-employees">All Employees</a>
+              </li>
+              <li>
+                <a routerLink="/employee/attendance">Attendance</a>
+              </li>
+              <li>
+                <a routerLink="/employee/departments">Departments</a>
+              </li>
+              <li>
+                <a routerLink="/employee/designations">Designation</a>
+              </li>
+              <li>
+                <a routerLink="/employee/holidays">Holidays</a>
+              </li>
+              <li>
+                <a routerLink="/employee/leave-request">Leave Requests</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a routerLink="/payroll"> Payroll</a>
+            <ul class="nav-list"> 
+              <li>
+                <a routerLink="/payroll/salaries">Employee Salary</a>
+              </li>
+              <li>
+                <a routerLink="/payroll/payslips">Payslips</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+          Toggle extra text
+        </button> -->
+      </mat-drawer>
+    
+      <!-- <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav
+        </button>
+      </div> -->
+    
+    </mat-drawer-container>
+  </div>
+  <div class="content-area" fxFlex="85" >
+    <router-outlet></router-outlet>
+  </div>
+  
+</div>
+<footer>
+</footer>

@@ -1,0 +1,34 @@
+.wrapper-app {
+    flex-direction: row;
+    display: flex;
+}
+.side-nav {
+    flex: 15%;
+    display: flex;
+    // border-right: 1px solid #d4d6d8;
+}
+.content-area {
+    flex: 85%;
+    margin-left: 8px;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+.nav-list {
+    padding-left: 16px;
+}
+.nav-list li {
+    padding: 8px;
+    margin-bottom: 6px;
+    list-style-type: none;
+}
+.nav-list li a {
+    cursor: pointer;
+}
+.nav-list li a:hover {
+    color: #0E8543;
+}
+.mat-drawer-container {
+    overflow: initial;
+    height: 1000px;
+}
