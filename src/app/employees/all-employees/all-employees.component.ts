@@ -19,8 +19,9 @@ export class AllEmployeesComponent implements OnInit {
   companyName: String;
   designation: String;
   phoneNumber: number;
+  EmployeesService: any;
 
-
+  employees = [];
 
   ngAfterViewInit() {
     (document.querySelector('.all-employee-container') as HTMLElement).style.display = 'block';
@@ -40,6 +41,11 @@ export class AllEmployeesComponent implements OnInit {
   constructor(private EmpService: EmployeesService) { }
 
   ngOnInit() {
+    this.EmpService.getAllEmployee().subscribe((data: any[]) => {
+      this.employees = data;
+      console.log("fetching employees data::")
+      console.log(data);
+    });
   }
 
   submitForm(myform): void {
