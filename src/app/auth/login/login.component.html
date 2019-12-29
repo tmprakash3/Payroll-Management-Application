@@ -1,6 +1,6 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title>Login</mat-card-title>
+    <mat-card-title class="text-center">Login</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <form class="example-form">
@@ -22,8 +22,8 @@
       </table>
     </form>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions class="text-center">
     <button mat-raised-button (click)="login()" color="primary">Login</button>
-    <span>Don't have an account ? <a [routerLink]="['/auth/register']" >register</a> here</span>
   </mat-card-actions>
+  <p>Don't have an account ? <a [routerLink]="['/auth/register']" >register</a> here</p>
 </mat-card>

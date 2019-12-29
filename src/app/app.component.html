@@ -1,6 +1,6 @@
 <app-header [user]="user"></app-header>
 <div class="wrapper-app" fxLayout="row" fxLayoutAlign="start start">
-  <div class="side-nav" fxFlex="15">
+  <div class="side-nav" fxFlex="15" *ngIf="user">
     <mat-drawer-container class="example-container" autosize >
       <mat-drawer class="example-sidenav" mode="side" opened>
         <ul class="nav-list">
@@ -27,7 +27,7 @@
               </li>
             </ul>
           </li>
-          <li class="mt-16">
+          <li class="mt-16" *ngIf="user && user.isAdmin">
             <a routerLink="/payroll"> Payroll</a>
             <ul class="nav-list"> 
               <li>
@@ -53,7 +53,7 @@
     
     </mat-drawer-container>
   </div>
-  <div class="content-area" fxFlex="85" fxLayout="column" >
+  <div class="content-area" fxLayout="column" >
     <router-outlet></router-outlet>
   </div>
   

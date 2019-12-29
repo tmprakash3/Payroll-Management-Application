@@ -18,6 +18,11 @@ export class AllEmployeesComponent implements OnInit {
   ]);
 
 
+  companyNames:string[] = ['Indus Business Systems', 'TradeLeaves India Pvt Ltd'];
+
+  designations:string[] = ['Fresher','Associate Engineer', 'Senior Associate Engineer', 'UI Developer', 'Java Developer', 'Full Stack Developer', 'UI/UX Engineer', 'Team Lead', 'Team Manager', 'Junior Architect', 'Senior Architect', 'Test Engineer', 'Quality Lead', 'Sr.Test Engineer', 'House Keeping', 'HR Department', 'Administration', 'Frontoffice'];
+
+
   constructor() { }
 
   ngOnInit() {

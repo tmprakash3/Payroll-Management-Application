@@ -9,7 +9,6 @@
 }
 .content-area {
     flex: 85%;
-    margin-left: 8px;
     display: flex;
     // align-items: center;
     // justify-content: center;
@@ -61,4 +60,7 @@
 }
 .mt-16 {
     margin-top: 16px;
+}
+table, .mat-form-field {
+    width: 100%;
 }
