@@ -5,12 +5,12 @@
             <h2 *ngIf="addEmployee">Add Employee</h2>
         </div>
         <div fxLayout="column" fxFlex="15" >
-            <button mat-raised-button color="primary" (click)="addEmployee =!addEmployee">Add Employee</button>
+            <button mat-raised-button color="primary" (click)="addEmployee = !addEmployee">Add Employee</button>
         </div>
     </div>
 
     <div *ngIf="addEmployee">
-        <form class="addEmployeeForm">
+        <form class="addEmployeeForm" #myform = "ngForm" (ngSubmit) = "submitForm(myform)">
             <mat-form-field class="example-full-width">
                 <input matInput placeholder="First Name*" [formControl]="FormControl"
                        [errorStateMatcher]="matcher">
@@ -126,7 +126,7 @@
             </mat-form-field>
 
             <div class="btn-center">
-                <button mat-raised-button color="accent" (click)="submitForm()">Submit</button>
+                <button mat-raised-button color="accent" type="submit">Submit</button>
             </div>
         </form>
     </div>

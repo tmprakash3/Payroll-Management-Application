@@ -15,32 +15,14 @@ import { CatchErrorInterceptor } from './interceptors/http-error.interceptor';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { PayrollComponent } from './payroll/payroll.component';
-import { AllEmployeesComponent } from './employees/all-employees/all-employees.component'
-import { HolidaysComponent } from './employees/holidays/holidays.component';
-import { LeaveRequestComponent } from './employees/leave-request/leave-request.component';
-import { AttendanceComponent } from './employees/attendance/attendance.component';
-import { DepartmentsComponent } from './employees/departments/departments.component';
-import { DesignationsComponent } from './employees/designations/designations.component';
-import { EmpSalaryComponent } from './payroll/emp-salary/emp-salary.component';
-import { PayslipsComponent } from './payroll/payslips/payslips.component';
+import { EmployeesModule } from './employees/employees.module';
+import { PayrollModule } from './payroll/payroll.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
-    EmployeesComponent,
-    PayrollComponent,
-    AllEmployeesComponent,
-    HolidaysComponent,
-    LeaveRequestComponent,
-    AttendanceComponent,
-    DepartmentsComponent,
-    DesignationsComponent,
-    EmpSalaryComponent,
-    PayslipsComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +32,9 @@ import { PayslipsComponent } from './payroll/payslips/payslips.component';
     SharedModule,
     AuthModule,
     AdminModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EmployeesModule,
+    PayrollModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

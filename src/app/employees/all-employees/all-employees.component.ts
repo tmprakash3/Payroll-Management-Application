@@ -28,4 +28,9 @@ export class AllEmployeesComponent implements OnInit {
   ngOnInit() {
   }
 
+  submitForm(myform) : void {
+    console.log('submitForm called');
+    console.log(myform);
+  }
+
 }
