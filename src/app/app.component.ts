@@ -51,6 +51,29 @@ export class AppComponent implements OnInit {
       this.userSubscription.unsubscribe();
     }
   }
+    showLinks = false;
+    showEmployeesLinks(): void {
+      if(!this.showLinks) {
+        this.showLinks = true;
+        this.showPayrolls = false;
+      }
+      else {
+        this.showLinks = false;
+      }
+      // this.showLinks = !this.showLinks;
+    }
+
+    showPayrolls = false;
+    showPayrollLinks(): void {
+      if(!this.showPayrolls) {
+        this.showLinks = false;
+        this.showPayrolls = true;
+      }
+      else {
+        this.showPayrolls = false;
+      }
+      // this.showPayrolls = !this.showPayrolls;
+    }
 
   registerSvgIcons() {
     [

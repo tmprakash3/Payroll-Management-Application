@@ -3,10 +3,14 @@
   <div class="side-nav" fxFlex="15" *ngIf="user">
     <mat-drawer-container class="example-container" autosize >
       <mat-drawer class="example-sidenav" mode="side" opened>
-        <ul class="nav-list">
+        <ul class="nav-list" style="padding-left: 0;">
           <li>
-            <a routerLink="/employees">Employees</a>
-            <ul class="nav-list"> 
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <a (click)="showEmployeesLinks()">Employees</a>
+              <mat-icon *ngIf="!showLinks">keyboard_arrow_right</mat-icon>
+              <mat-icon *ngIf="showLinks">keyboard_arrow_down</mat-icon>
+          </div>
+            <ul class="nav-list" *ngIf="showLinks"> 
               <li>
                 <a routerLink="/employees/all-employees" routerLinkActive="active">All Employees</a>
               </li>
@@ -27,9 +31,13 @@
               </li>
             </ul>
           </li>
-          <li class="mt-16" *ngIf="user && user.isAdmin">
-            <a routerLink="/payroll"> Payroll</a>
-            <ul class="nav-list"> 
+          <li class="" >
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a (click)="showPayrollLinks()"> Payroll</a>
+            <mat-icon *ngIf="!showPayrolls">keyboard_arrow_right</mat-icon>
+            <mat-icon *ngIf="showPayrolls">keyboard_arrow_down</mat-icon>
+          </div>
+            <ul class="nav-list" *ngIf="showPayrolls"> 
               <li>
                 <a routerLink="/payroll/salaries" routerLinkActive="active">Employee Salary</a>
               </li>
