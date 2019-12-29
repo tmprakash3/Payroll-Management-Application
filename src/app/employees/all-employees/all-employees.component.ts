@@ -19,7 +19,6 @@ export class AllEmployeesComponent implements OnInit {
   companyName: String;
   designation: String;
   phoneNumber: number;
-  EmployeesService: any;
 
   employees = [];
 

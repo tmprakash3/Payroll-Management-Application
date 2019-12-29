@@ -43,12 +43,12 @@ exports.saveEmployee = function (req, res) {
 
 }
 
-.getAllEmployee('/api/employee/getAll', function(req, res){
+exports.getAllEmployees = function(req, res){
     console.log("I received a GET request")
-    db.users.find({},function(err, users){
+    Employee.find({},function(err, users){
         console.log("Getting data from db");
         console.log(users);
         res.json(users);
     });
     console.log("Returned data");
-});
+};

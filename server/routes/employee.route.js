@@ -11,6 +11,10 @@ router.use(passport.authenticate('jwt', { session: false }))
 router.route('/save')
   .post(empCtrl.saveEmployee);
 
+
+router.route('/getAll')
+.get(empCtrl.getAllEmployees);  
+
   module.exports = router;
 
 
