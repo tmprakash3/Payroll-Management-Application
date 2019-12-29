@@ -13,7 +13,10 @@ router.route('/save')
 
 
 router.route('/getAll')
-.get(empCtrl.getAllEmployees);  
+.get(empCtrl.getAllEmployee);  
+
+router.route('/delete')
+.delete(empCtrl.deleteEmployee);
 
   module.exports = router;
 

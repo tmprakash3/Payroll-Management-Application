@@ -9,11 +9,15 @@ export class EmployeesService {
 
   constructor(private http : HttpClient) { }
 
-  saveEmployee(employeeDTO) :  any {
+  saveEmployee(employeeDTO: any) :  any {
     return this.http.post<any>('/api/employee/save', employeeDTO);
   }
 
   getAllEmployee():Observable<any> {
     return this.http.get('/api/employee/getAll');
+  }
+
+  deleteEmployee(employeeDTO): Observable<any> {
+    return this.http.delete<any>('/api/employee/delete/:id', employeeDTO);
   }
 }

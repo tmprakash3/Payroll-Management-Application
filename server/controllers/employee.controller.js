@@ -43,7 +43,7 @@ exports.saveEmployee = function (req, res) {
 
 }
 
-exports.getAllEmployees = function(req, res){
+exports.getAllEmployee = function(req, res){
     console.log("I received a GET request")
     Employee.find({},function(err, users){
         console.log("Getting data from db");
@@ -52,3 +52,15 @@ exports.getAllEmployees = function(req, res){
     });
     console.log("Returned data");
 };
+
+
+exports.deleteEmployee = function(req, res) {
+    console.log("I received a POST Delete request")
+    var empId = req.params.employeeId;
+    Employee.remove({empId},function(err, users){
+        console.log("Getting data from db after removing");
+        console.log(users);
+        res.json(users);
+    });
+    console.log("Returned data");
+}

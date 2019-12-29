@@ -130,6 +130,55 @@
             </div>
         </form>
     </div>
+
+    <div class="" *ngIf="!addEmployee">
+      <div fxLayout="row" class="employee-container emp-header">
+        <div fxFlex="10">
+          Emp. ID
+        </div>
+        <div fxFlex="25">
+          Emp Name
+        </div>
+        <div fxFlex="15">
+          User Name
+        </div>
+        <div fxFlex="25">
+          Email ID
+        </div>
+        <div fxFlex="15">
+          Designation
+        </div>
+        <div fxFlex="10">
+          Actions
+        </div>
+      </div>
+      <div fxLayout="row" *ngFor="let employee of employees" class="employee-container">
+        <div fxFlex="10">
+          {{employee.employeeId}}
+        </div>
+        <div fxFlex="25">
+          {{employee.firstName}} {{employee.lastName}}
+        </div>
+        <div fxFlex="15">
+          {{employee.userName}}
+        </div>
+        <div fxFlex="25">
+          {{employee.emailId}}
+        </div>
+        <div fxFlex="15">
+          {{employee.designation}}
+        </div>
+        <div fxFlex="10">
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Edit</button>
+              <button mat-menu-item (click)="deleteEmp(employee)">Delete</button>
+            </mat-menu>
+        </div>
+      </div>
+    </div>
 </div>
 
 
