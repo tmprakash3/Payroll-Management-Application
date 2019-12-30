@@ -15,7 +15,7 @@ router.route('/save')
 router.route('/getAll')
 .get(empCtrl.getAllEmployee);  
 
-router.route('/delete')
+router.route('/delete/:id')
 .delete(empCtrl.deleteEmployee);
 
   module.exports = router;
