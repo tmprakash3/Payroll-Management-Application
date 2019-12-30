@@ -19,6 +19,7 @@ export class AllEmployeesComponent implements OnInit {
   companyName: String;
   designation: String;
   phoneNumber: number;
+  addEmployee: false;
 
   employees = [];
 
@@ -82,6 +83,24 @@ export class AllEmployeesComponent implements OnInit {
         console.log('Email already exists');
       } else {
         console.log('need to call get employess method');
+        this.addEmployee = false;
+        this.firstName = null;
+        this.lastName = null;
+        this.userName = null;
+        this.emailId = null;
+        this.password = null;
+        this.confirmPassword = null;
+        this.employeeId = null;
+        this.joiningDate = null;
+        this.companyName = null;
+        this.designation = null;
+        this.phoneNumber = null;
+        this.emailFormControl.reset();
+        this.EmpService.getAllEmployee().subscribe((data: any[]) => {
+          this.employees = data;
+          console.log("fetching employees data after save::")
+          console.log(data);
+        });
       }
     })
 
@@ -90,9 +109,14 @@ export class AllEmployeesComponent implements OnInit {
 
   deleteEmp(employeeId): void {
     console.log(employeeId);
-    this.EmpService.deleteEmployee({id: employeeId}).subscribe((response) => {
+    this.EmpService.deleteEmployee({ id: employeeId }).subscribe((response) => {
       console.log('response from deleteEmployee');
       console.log(response);
+      for (var i = 0; i < this.employees.length; i++) {
+        if (response.employeeId == this.employees[i].employeeId) {
+          this.employees.splice(i, 1);
+        }
+      }
     });
   }
 
