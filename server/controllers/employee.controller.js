@@ -61,7 +61,7 @@ exports.deleteEmployee = function(req, res) {
     console.log("Employee service");
     
     console.log(empId);
-    Employee.deleteOne({empId: empId},function(err, users){
+    Employee.findOneAndRemove({employeeId: empId},function(err, users){
         console.log("Getting data from db after removing");
         if (err) throw err;
         console.log(users);
