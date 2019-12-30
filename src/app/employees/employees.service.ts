@@ -17,9 +17,9 @@ export class EmployeesService {
     return this.http.get('/api/employee/getAll');
   }
 
-  deleteEmployee(id): Observable<any> {
+  deleteEmployee(empID): Observable<any> {
     console.log('deleteEmployee in service');
-    console.log(id);
-    return this.http.get<any>('/api/employee/delete/'+id);
+    console.log(empID);
+    return this.http.get<any>('/api/employee/delete'+ '/' + empID.id);
   }
 }
