@@ -90,7 +90,7 @@ export class AllEmployeesComponent implements OnInit {
 
   deleteEmp(employeeDTO: { employeeId: any; }): void {
     console.log(employeeDTO);
-    this.EmpService.deleteEmployee({id: employeeDTO.employeeId}).subscribe((response) => {
+    this.EmpService.deleteEmployee({'id': employeeDTO.employeeId}).subscribe((response) => {
       console.log('response from deleteEmployee');
       console.log(response);
     });

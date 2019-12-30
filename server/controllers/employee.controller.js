@@ -55,11 +55,12 @@ exports.getAllEmployee = function(req, res){
 
 
 exports.deleteEmployee = function(req, res) {
-    console.log("I received a POST Delete request")
+    console.log("I received a POST Delete request");
+    console.log(req.params);
     var empId = req.params.id;
     console.log("Employee service");
     
-    console.log(Employee);
+    console.log(empId);
     Employee.deleteOne({empId: empId},function(err, users){
         console.log("Getting data from db after removing");
         if (err) throw err;
