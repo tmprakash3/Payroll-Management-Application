@@ -13,12 +13,12 @@ router.route('/save')
 
 
 router.route('/getAll')
-.get(empCtrl.getAllEmployee);  
+  .get(empCtrl.getAllEmployee);
 
 router.route('/delete/:id')
-.delete(empCtrl.deleteEmployee);
+  .get(empCtrl.deleteEmployee);
 
-  module.exports = router;
+module.exports = router;
 
 
 
