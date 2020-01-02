@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import '~@angular/material/theming';
 
 $custom-typography: mat-typography-config(
-    $font-family: 'Exo'
+    $font-family: 'Overpass'
 );
 
 @include mat-core($custom-typography);
@@ -12,9 +12,18 @@ body {
   background-color: #f4f3f3;
   margin: 0;
   app-root * {
-    font-family: 'Exo', sans-serif;
+    font-family: 'Overpass', sans-serif;
   }
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Overpass, "Helvetica Neue", sans-serif; }
+.mat-drawer {
+  background-color: white !important;
+}
+.nav-list li .mat-icon {
+  color: #25333C;
+}
+.mat-drawer-side {
+  border-right: solid 1px #d4d6d8;
+}

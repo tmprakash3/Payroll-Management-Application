@@ -9,6 +9,7 @@ import { DesignationsComponent } from './designations/designations.component';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { LeaveRequestComponent } from './leave-request/leave-request.component';
 import { EmployessRoutingModule } from './employess-routing.module';
+import { TimesheetsComponent } from './timesheets/timesheets.component';
 
 
 
@@ -24,7 +25,8 @@ import { EmployessRoutingModule } from './employess-routing.module';
     DepartmentsComponent,
     DesignationsComponent,
     HolidaysComponent,
-    LeaveRequestComponent
+    LeaveRequestComponent,
+    TimesheetsComponent
   ],
   providers: [
     EmployeesService

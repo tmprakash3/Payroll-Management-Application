@@ -6,6 +6,7 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { DesignationsComponent } from './designations/designations.component';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { LeaveRequestComponent } from './leave-request/leave-request.component';
+import { TimesheetsComponent } from './timesheets/timesheets.component';
 
 
 const routes: Routes = [{
@@ -16,7 +17,8 @@ const routes: Routes = [{
     { path: 'departments', component: DepartmentsComponent },
     { path: 'designations', component: DesignationsComponent },
     { path: 'holidays', component: HolidaysComponent },
-    { path: 'leave-request', component: LeaveRequestComponent },]
+    { path: 'leave-request', component: LeaveRequestComponent },
+    {path: 'timesheets', component: TimesheetsComponent},]
 }];
 
 @NgModule({

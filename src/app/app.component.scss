@@ -5,11 +5,14 @@
 .side-nav {
     flex: 15%;
     display: flex;
+    height: 100vh;
     // border-right: 1px solid #d4d6d8;
 }
 .content-area {
     flex: 85%;
     display: flex;
+    background-color: white;
+    height: 100vh;
     // align-items: center;
     // justify-content: center;
 }

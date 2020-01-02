@@ -133,17 +133,20 @@
 
   <div class="" *ngIf="!addEmployee && employees.length > 0">
     <div fxLayout="row" class="employee-container emp-header">
-      <div fxFlex="10">
+      <!-- <div fxFlex="10">
         Emp. ID
-      </div>
+      </div> -->
       <div fxFlex="25">
         Emp Name
       </div>
-      <div fxFlex="15">
-        User Name
-      </div>
       <div fxFlex="25">
         Email ID
+      </div>
+      <div fxFlex="15">
+        Mobile
+      </div>
+      <div fxFlex="15">
+        Joining Date
       </div>
       <div fxFlex="15">
         Designation
@@ -153,22 +156,35 @@
       </div>
     </div>
     <div fxLayout="row" *ngFor="let employee of employees" class="employee-container">
-      <div fxFlex="10">
-        {{employee.employeeId}}
+      <div fxFlex="25" class="pv-8">
+        <div class="name-user-section">
+          <div class="user-avatar" [ngStyle]="{'background-color': getRandomColor()}">{{employee.firstName.charAt(0).toUpperCase()}}</div>
+          <div class="name-section">
+            <p class="name">
+              {{employee.firstName}} {{employee.lastName}}
+            </p>
+            <p class="designation">
+              {{employee.designation}}
+            </p>
+          </div>
+        </div>
       </div>
-      <div fxFlex="25">
-        {{employee.firstName}} {{employee.lastName}}
-      </div>
-      <div fxFlex="15">
-        {{employee.userName}}
-      </div>
-      <div fxFlex="25">
+      <!-- <div fxFlex="20">
+        {{employee.firstName.charAt(0).toUpperCase()}} {{employee.lastName}}
+      </div> -->
+      <div fxFlex="25" class="pv-8">
         {{employee.emailId}}
       </div>
-      <div fxFlex="15">
+      <div fxFlex="15" class="pv-8">
+        {{employee.phoneNumber}}
+      </div>
+      <div fxFlex="15" class="pv-8">
+        {{employee.joiningDate}}
+      </div>
+      <div fxFlex="15" class="pv-8">
         {{employee.designation}}
       </div>
-      <div fxFlex="10">
+      <div fxFlex="10" class="pv-8">
         <button mat-button [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
         </button>

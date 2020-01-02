@@ -21,9 +21,62 @@ app-all-employees {
 }
 .employee-container {
     border-bottom: 1px solid #d4d6d8;
-    margin-bottom: 8px;
+    // margin-bottom: 8px;
+}
+.employee-container div {
+    font-size: 14px;
+    color: #999;
+    // padding: 8px 0;
 }
 .emp-header div {
     font-weight: 600;
     color: #25333C;
+    background-color: #edf0f1;
+    box-shadow: 0 0 3px #e5e5e5;
+    padding: 8px 0;
 }
+.emp-header div:first-child {
+    padding: 8px;
+}
+.user-avatar {
+    background-color: #aaa;
+    border-radius: 50%;
+    color: #fff !important;
+    display: inline-block;
+    font-weight: 500;
+    height: 38px;
+    line-height: 38px;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 38px;
+    position: relative;
+    white-space: nowrap;
+}
+p.name {
+    display: inline-block;
+    font-size: 14px;
+    color: #25333C;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+p.designation {
+    color: #9e9e9e;
+    display: block;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.name-user-section {
+    display: flex;
+    flex-flow: row;
+    // align-items: center;
+}
+.pv-8 {
+    padding: 8px 0;
+} 

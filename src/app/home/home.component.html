@@ -1,5 +1,5 @@
 <div class="hero-img-container align-center" *ngIf="!user">
-<h1>Welcome to Tradeleaves Payroll Management</h1>
+<h1>Welcome to Smart Payroll</h1>
 </div>
 
 
@@ -9,40 +9,3 @@
 <!-- <div class="container" >
   <h2>Welcome to TradeLeaves Payroll Managment Dashbaoard</h2>
 </div> -->
-<div class="dashboard-card-container" fxLayout="row">
-  <div class="dashboard-items-left-pane" fxFlex="70">
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Personal data
-          </mat-panel-title>
-          <!-- <mat-panel-description>
-            Type your name and age
-          </mat-panel-description> -->
-        </mat-expansion-panel-header>
-    
-        <mat-form-field>
-          <input matInput placeholder="First name">
-        </mat-form-field>
-    
-        <mat-form-field>
-          <input matInput placeholder="Age">
-        </mat-form-field>
-      </mat-expansion-panel>
-      <mat-expansion-panel (opened)="panelOpenState = true"
-                           (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Self aware panel
-          </mat-panel-title>
-          <!-- <mat-panel-description>
-            Currently I am {{panelOpenState ? 'open' : 'closed'}}
-          </mat-panel-description> -->
-        </mat-expansion-panel-header>
-        <p>I'm visible because I am open</p>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </div>
-  <div class="dashboard-items-right-pane" fxFlex="30"></div>
-</div>
